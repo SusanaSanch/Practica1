@@ -18,12 +18,10 @@ public class MainLibro {
 	public static void mostrar()
 	{
 		
-			
-			String listado_libros = "";
 			Collection<Libro> lista = MapaLibros.mapa_libros.values();
 			for (Libro libro : lista) 
 			{
-				System.out.println(libro.getIsbn() + ". " + libro.getTitulo() + ". "+ libro.getAnyo() + ". "+ libro.getAutor() + ". " + libro.getEditioral()+ ". ");
+				System.out.println("Isbn = " + libro.getIsbn() + ". " + "Título = " +libro.getTitulo() + ". "+ "Año = " + libro.getAnyo() + ". "+"Autor = " + libro.getAutor() + ". " + "Editorial = " +libro.getEditioral()+ ". ");
 			}
 					
 					
@@ -51,6 +49,7 @@ public class MainLibro {
 		
 		reader.parse(new InputSource(new FileInputStream("libros.xml")));
 		mostrar();
+		System.out.println("\nNúmero de libros: " + getNLibros());
 
 	}
 	
