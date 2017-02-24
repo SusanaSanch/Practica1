@@ -2,6 +2,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -16,15 +17,16 @@ public class MainLibro {
 
 	public static void mostrar()
 	{
-		Libro libro = null;
-		List<Libro> lista_libros = new ArrayList<Libro>();
-		String isbn = null;
 		
-////		for (String nombre: listaLibros.keySet())
-//		{
-//            String value = listaLibros.get(nombre).toString();
-//            System.out.println(nombre+value);  
-////		
+			
+			String listado_libros = "";
+			Collection<Libro> lista = MapaLibros.mapa_libros.values();
+			for (Libro libro : lista) 
+			{
+				System.out.println(libro.getIsbn() + ". " + libro.getTitulo() + ". "+ libro.getAnyo() + ". "+ libro.getAutor() + ". " + libro.getEditioral()+ ". ");
+			}
+					
+					
 		
 	}
 	

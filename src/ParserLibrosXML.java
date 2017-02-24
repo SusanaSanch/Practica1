@@ -54,17 +54,15 @@ public class ParserLibrosXML extends DefaultHandler {
 			throws SAXException {
 		// TODO Auto-generated method stub
 //		super.endElement(uri, localName, qName);
-		System.out.println("EndElement = " + localName);
+		
 		if(localName.equals("libro"))
 		{
-			System.out.println("\n");
 			lista_libros.add(libro);
 		}
 		
 		if (localName.equals("titulo"))
 		{
 			libro.setTitulo(valor_actual);
-			System.out.println(libro.getTitulo());
 		}
 		else if (localName.equals("autor"))
 		{
